@@ -40,7 +40,7 @@ const PostPage = ({ title, subtitle, picture, tags, description, slug, isLoading
           title={title}
           meta={[
               { property: 'og:title', content: title },
-              { property: 'og:image', content: picture },
+              { property: 'og:image', content: `${AppConstants.url}${picture}` },
               { property: 'og:site_name', content: title },
               { property: 'og:url', content: `${AppConstants.url}/post/${slug}` },
               { property: 'og:type', content: 'article' },
@@ -53,7 +53,7 @@ const PostPage = ({ title, subtitle, picture, tags, description, slug, isLoading
                   "@context": "http://schema.org",
                   "@type": "CreativeWork",
                   "url": "${AppConstants.url}",
-                  "image": "${picture}",
+                  "image": "${AppConstants.url}${picture}",
                   "producer": "${AppConstants.name}"
                 }`,
             },
