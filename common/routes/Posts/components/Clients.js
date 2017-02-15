@@ -31,9 +31,11 @@ const Clients = () => (
   <div className={css(styles.container)}>
     <h1 className={css(styles.title)}>{'Some of the clients I\'ve worked with'}</h1>
     {
+        /* eslint-disable no-use-before-define */
         clientList.map((client, i) =>
           <h4 key={client.name} className={css(styles.item)}>{client.name} {i !== clientList.length - 1 && '/'}</h4>,
         )
+        /* eslint-enable no-use-before-define */
     }
   </div>
 );
