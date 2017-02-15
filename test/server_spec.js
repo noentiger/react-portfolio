@@ -36,7 +36,7 @@ describe('API', () => {
       subtitle: 'Savings calculator developed for Sparebank1 in Norway',
       picture: '/media/sparebank1-sparkalkulator.jpg',
       client: 'Sparebank1',
-      content: '',
+      description: '',
     };
 
     chai.request(server)

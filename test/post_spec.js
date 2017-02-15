@@ -13,7 +13,7 @@ describe('Post Reducer', () => {
     subtitle: '',
     picture: '',
     client: '',
-    content: '',
+    description: '',
   };
 
   it('should return default state if action is undefined', () => {
@@ -36,7 +36,7 @@ describe('Post Reducer', () => {
       subtitle: '',
       picture: '',
       client: '',
-      content: '',
+      description: '',
     };
 
     const nextState = reducer(initialState, action);
@@ -51,7 +51,7 @@ describe('Post Reducer', () => {
       subtitle: 'Savings calculator developed for Sparebank1 in Norway',
       picture: '/media/sparebank1-sparkalkulator.jpg',
       client: '',
-      content: 'Lorem hipsum dipsum',
+      description: 'Lorem hipsum dipsum',
     };
     const currentTime = Date.now();
     const action = {
@@ -72,7 +72,7 @@ describe('Post Reducer', () => {
       subtitle: 'Savings calculator developed for Sparebank1 in Norway',
       picture: '/media/sparebank1-sparkalkulator.jpg',
       client: '',
-      content: 'Lorem hipsum dipsum',
+      description: 'Lorem hipsum dipsum',
     };
 
     const nextState = reducer(initialState, action);
@@ -97,7 +97,7 @@ describe('Post Reducer', () => {
       subtitle: '',
       picture: '',
       client: '',
-      content: '',
+      description: '',
     };
 
     const nextState = reducer(initialState, action);

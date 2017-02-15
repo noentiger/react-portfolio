@@ -9,7 +9,7 @@ const initialState = {
   picture: '',
   slug: '',
   tags: [],
-  content: '',
+  description: '',
 };
 
 export default function currentPost(state = initialState, action) {
@@ -23,7 +23,7 @@ export default function currentPost(state = initialState, action) {
         title: action.payload.title,
         subtitle: action.payload.subtitle,
         tags: action.payload.tags,
-        content: action.payload.content,
+        description: action.payload.description,
         picture: action.payload.picture,
         slug: action.payload.slug,
         lastFetched: action.meta.lastFetched,

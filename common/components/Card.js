@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
   },
 });
 
-const Card = ({ tags, title, subtitle, slug, picture, content, large }) => (
+const Card = ({ tags, title, subtitle, slug, picture, description, large }) => (
   <Link
     to={`/post/${slug}`}
     className={css(styles.cardContainer, large && styles.cardContainerLarge)}
@@ -78,7 +78,7 @@ const Card = ({ tags, title, subtitle, slug, picture, content, large }) => (
     <div className={css(styles.content, large && styles.contentLarge)}>
       <h1 className={css(styles.title)}>{title}</h1>
       <h2 className={css(styles.subtitle)}>{subtitle}</h2>
-      {large && <p className={css(styles.description)}>{content}</p>}
+      {large && <p className={css(styles.description)}>{description}</p>}
       <Tags tags={tags} />
     </div>
   </Link>
@@ -90,12 +90,12 @@ Card.propTypes = {
   subtitle: PropTypes.string.isRequired,
   picture: PropTypes.string.isRequired,
   slug: PropTypes.string,
-  content: PropTypes.string,
+  description: PropTypes.string,
   large: PropTypes.bool,
 };
 
 Card.defaultProps = {
-  content: '',
+  description: '',
   large: false,
   slug: '',
 };

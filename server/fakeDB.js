@@ -6,7 +6,7 @@ const fakeDB = [
     subtitle: 'We are a Movement Dedicated to Connect Newcomers with Welcomers',
     tags: ['Startup', 'Development', 'Innovation', 'Impact Tech', 'Founder'],
     picture: '/media/15440459_1159469577493205_5072693347909689122_o.jpg',
-    content: 'I volunteered to lead the technical process of developing a hybrid app where newcomers in Sweden can connect with locals.\n\n We engaged a team of about 20 contributors/volunteers that collaborated together to launch the very first version of Welcome App in the winter 2015.\n\n My contribution included sprint planning, technical architecture, programming, best practices and recruitment of developers.\n\n Today Welcome App is funded and has a team working full-time at Norrsken House to scale it further.',
+    description: 'I volunteered to lead the technical process of developing a hybrid app where newcomers in Sweden can connect with locals.\n\n We engaged a team of about 20 contributors/volunteers that collaborated together to launch the very first version of Welcome App in the winter 2015.\n\n My contribution included sprint planning, technical architecture, programming, best practices and recruitment of developers.\n\n Today Welcome App is funded and has a team working full-time at Norrsken House to scale it further.',
   },
   {
     id: 'xys19asdasd0a',
@@ -15,7 +15,7 @@ const fakeDB = [
     slug: 'ooak-a-personalised-vintage-app',
     subtitle: 'A Personalised Vintage App',
     picture: '/media/ooak-a-personalised-vintage-app.jpg',
-    content: 'Lead the technical process together with a team of great developers.\n\n My days included planning, experimentation with lean methodologies and balancing user-driven development with scalable components.\n\n Our team covered every step from concept to launch and scale up within the Schibsted Media Group. Worked closely, on an everyday basis, with Product Managers, UX/UI designers and our end users which made us fast and unstoppable.',
+    description: 'Lead the technical process together with a team of great developers.\n\n My days included planning, experimentation with lean methodologies and balancing user-driven development with scalable components.\n\n Our team covered every step from concept to launch and scale up within the Schibsted Media Group. Worked closely, on an everyday basis, with Product Managers, UX/UI designers and our end users which made us fast and unstoppable.',
   },
   {
     id: 'xys19asdsds3asd0a',
@@ -24,7 +24,7 @@ const fakeDB = [
     slug: 'dine-app',
     subtitle: 'Dine is social dining for food-lovers by food-lovers. ',
     picture: '/media/dine-hero.jpg',
-    content: 'With Dine you can easily find a home-chef in your area to go for a home cooked meal and pay less than you do at a regular restaurant.\n\n If you enjoy cooking, invite a stranger over for a meal and earn some extra money.',
+    description: 'With Dine you can easily find a home-chef in your area to go for a home cooked meal and pay less than you do at a regular restaurant.\n\n If you enjoy cooking, invite a stranger over for a meal and earn some extra money.',
   },
   {
     id: 'xys190a',
@@ -33,7 +33,7 @@ const fakeDB = [
     slug: 'marketing-room-collect-leads-and-compaigns',
     subtitle: 'Manage all campaigns and leads from one platform',
     picture: '/media/marketing-room-response.jpg',
-    content: '',
+    description: '',
   },
   {
     id: 'xys190b',
@@ -42,7 +42,7 @@ const fakeDB = [
     slug: 'cloth-talk-part-ii',
     subtitle: 'A recipe wallpaper of the human body',
     picture: '/media/ingredients.jpg',
-    content: '',
+    description: '',
   },
   {
     id: '128ssad043hd',
@@ -52,7 +52,7 @@ const fakeDB = [
     subtitle: 'Interactive HTML5 Game',
     picture: '/media/whac-a-robot.jpg',
     client: 'Proteinfabrikken',
-    content: '',
+    description: '',
   },
   {
     id: '128sd043hf',
@@ -62,7 +62,7 @@ const fakeDB = [
     subtitle: 'Register your handicap and win an golf trips',
     picture: '/media/target-26.jpg',
     client: 'Norges Golfforbund',
-    content: '',
+    description: '',
   },
   {
     id: '128s32d0ad043hd',
@@ -72,7 +72,7 @@ const fakeDB = [
     subtitle: 'Pack the bag and get ready for a norwegian "tur"',
     picture: '/media/pakk-birkensekken.jpg',
     client: 'Birken',
-    content: '',
+    description: '',
   },
   {
     id: '128s3as32fd0ad043hd',
@@ -82,7 +82,7 @@ const fakeDB = [
     subtitle: 'Developed an inhouse project managament system for sales and projects',
     picture: '/media/loop-project-management.jpg',
     client: '',
-    content: '',
+    description: '',
   },
   {
     id: '128s3as32fd052ad043hd',
@@ -92,7 +92,7 @@ const fakeDB = [
     subtitle: 'A Facebook campaign to create engagement for Kragerö Resort',
     picture: '/media/kragero-resort-golf.jpg',
     client: 'Kragerö Resort',
-    content: '',
+    description: '',
   },
   {
     id: '128s3as32fd05as2ad043hd',
@@ -102,7 +102,7 @@ const fakeDB = [
     subtitle: 'A complete remake of webshop',
     picture: '/media/smartlager-webshop.jpg',
     client: 'Smartlager',
-    content: '',
+    description: '',
   },
   {
     id: '128s3as32fd05aas32agd043hd',
@@ -112,7 +112,7 @@ const fakeDB = [
     subtitle: 'Manage your brands campaigns, follow the evolution and measure your ROI.',
     picture: '/media/solid-response.jpg',
     client: 'Inhouse',
-    content: '',
+    description: '',
   },
   {
     id: '128s3as132fd05asaas32agd043hd',
@@ -122,7 +122,7 @@ const fakeDB = [
     subtitle: 'Viral campaign to invite your friends for a sushi dinner',
     picture: '/media/ra-sushi.jpg',
     client: 'Rå Sudio',
-    content: '',
+    description: '',
   },
   {
     id: '128s3as132fd05asa31as32agd043hd',
@@ -132,7 +132,7 @@ const fakeDB = [
     subtitle: 'Viral campaign to invite your friends for a dinner.',
     picture: '/media/castello-fyll-ett-bord.jpg',
     client: 'Arla',
-    content: '',
+    description: '',
   },
   {
     id: '128s3alxla132fd05asa31as32agd043hd',
@@ -142,7 +142,7 @@ const fakeDB = [
     subtitle: 'See recent activity on your brand and respond to your customers instantly',
     picture: '/media/marketing-room-timeline.jpg',
     client: 'Inhouse',
-    content: '',
+    description: '',
   },
   {
     id: 'xys190s',
@@ -152,7 +152,7 @@ const fakeDB = [
     subtitle: 'An interactive game',
     picture: '/media/pf-shop-til-u-drop.jpg',
     client: 'Proteinfabrikken',
-    content: '',
+    description: '',
   },
   {
     id: '128sd04d',
@@ -162,7 +162,7 @@ const fakeDB = [
     subtitle: 'Savings calculator developed for Sparebank1 in Norway',
     picture: '/media/sparebank1-sparkalkulator.jpg',
     client: 'Sparebank1',
-    content: '',
+    description: '',
   },
 ];
 

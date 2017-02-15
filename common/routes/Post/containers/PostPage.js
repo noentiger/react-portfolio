@@ -31,11 +31,33 @@ const styles = StyleSheet.create({
   },
 });
 
-const PostPage = ({ title, subtitle, picture, tags, content, isLoading, error }) => {
+const PostPage = ({ title, subtitle, picture, tags, description, slug, isLoading, error }) => {
   if (!error) {
     return (
       <section className={css(styles.container)}>
-        <Helmet title={title} />
+        <Helmet
+          title={title}
+          meta={[
+              { property: 'og:title', content: title },
+              { property: 'og:image', content: picture },
+              { property: 'og:site_name', content: title },
+              { property: 'og:url', content: `http://kimwijk.com/post/${slug}` },
+              { property: 'og:type', content: 'article' },
+              { property: 'og:description', content: description },
+          ]}
+          script={[
+            {
+              type: 'application/ld+json',
+              innerHTML: `{
+                  "@context": "http://schema.org",
+                  "@type": "CreativeWork",
+                  "url": "http://www.kimwijk.com",
+                  "image": "${picture}",
+                  "producer": "Kim Wijk"
+                }`,
+            },
+          ]}
+        />
         <Loading loading={isLoading} />
         {!isLoading &&
         <Card
@@ -43,7 +65,7 @@ const PostPage = ({ title, subtitle, picture, tags, content, isLoading, error })
           title={title}
           subtitle={subtitle}
           picture={picture}
-          content={content}
+          description={description}
           large
         />}
       </section>
@@ -56,9 +78,10 @@ const PostPage = ({ title, subtitle, picture, tags, content, isLoading, error })
 PostPage.propTypes = {
   title: PropTypes.string.isRequired,
   subtitle: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
   picture: PropTypes.string.isRequired,
   tags: PropTypes.arrayOf(React.PropTypes.string),
-  content: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   isLoading: PropTypes.bool.isRequired,
   error: PropTypes.oneOfType([React.PropTypes.oneOf([null]), PropTypes.any]),
 };
