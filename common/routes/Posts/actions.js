@@ -14,9 +14,6 @@ export const loadPosts = () => (dispatch, getState, { axios }) => {
         });
       })
       .catch((error) => {
-        /* eslint-disable no-console */
-        console.error(`Error in reducer that handles ${LOAD_POSTS_SUCCESS}: `, error);
-        /* eslint-enable no-console */
         dispatch({
           type: LOAD_POSTS_FAILURE,
           payload: error,

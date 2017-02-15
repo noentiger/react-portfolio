@@ -14,9 +14,6 @@ export const loadPost = slug => (dispatch, getState, { axios }) => {
           });
         })
         .catch((error) => {
-          /* eslint-disable no-console */
-          console.error(`Error in reducer that handles ${LOAD_POST_SUCCESS}: `, error);
-          /* eslint-enable no-console */
           dispatch({
             type: LOAD_POST_FAILURE,
             payload: error,

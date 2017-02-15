@@ -1,13 +1,10 @@
 import { Router } from 'express';
+import fakeDB from '../fakeDB';
+
 const router = new Router();
 
-// Remove this
-import fakeDB from '../fakeDB.js';
-
 router.get('/', (req, res) => {
-  setTimeout(() => {
-    res.status(200).json(fakeDB);
-  }, 300);
+  res.status(200).json(fakeDB);
 });
 
 router.get('/:slug', (req, res) => {
@@ -17,10 +14,7 @@ router.get('/:slug', (req, res) => {
       error: 'Post does not exist in db',
     });
   }
-
-  setTimeout(() => {
-    res.status(200).json(fakeDB[index]);
-  }, 300);
+  res.status(200).json(fakeDB[index]);
 });
 
 module.exports = router;

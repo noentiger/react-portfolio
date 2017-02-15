@@ -3,7 +3,7 @@ import * as types from './constants';
 const initialState = {
   lastFetched: null,
   isLoading: false,
-  error: null,
+  error: false,
   title: '',
   subtitle: '',
   picture: '',
@@ -17,7 +17,7 @@ export default function currentPost(state = initialState, action) {
     case types.LOAD_POST_REQUEST:
       return { ...state,
         isLoading: true,
-        error: null };
+        error: false };
     case types.LOAD_POST_SUCCESS:
       return { ...state,
         title: action.payload.title,
@@ -30,7 +30,7 @@ export default function currentPost(state = initialState, action) {
         isLoading: false };
     case types.LOAD_POST_FAILURE:
       return { ...state,
-        error: action.payload };
+        error: action.error };
     default:
       return state;
   }
