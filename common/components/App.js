@@ -4,6 +4,7 @@ import { StyleSheet, css } from 'aphrodite';
 import Nav from './Nav';
 import Header from './Header';
 import { Color } from '../style';
+import { AppConstants } from '../constants';
 
 const styles = StyleSheet.create({
   root: {
@@ -37,14 +38,14 @@ const styles = StyleSheet.create({
 const App = ({ children }) => (
   <div className={css(styles.root)}>
     <Helmet
-      title="Kim Wijk – A Portfolio of a Passion-driven Tech Entrepreneur"
+      title={AppConstants.title}
       meta={[
-          { property: 'og:title', content: 'Kim Wijk – A Portfolio of a Passion-driven Tech Entrepreneur' },
-          { property: 'og:image', content: 'http://kimwijk.com/media/profile-picture.jpg' },
-          { property: 'og:site_name', content: 'Kim Wijk – A Portfolio of a Passion-driven Tech Entrepreneur' },
-          { property: 'og:url', content: 'http://kimwijk.com' },
+          { property: 'og:title', content: AppConstants.title },
+          { property: 'og:image', content: AppConstants.profilePicture },
+          { property: 'og:site_name', content: AppConstants.title },
+          { property: 'og:url', content: AppConstants.url },
           { property: 'og:type', content: 'article' },
-          { property: 'og:description', content: 'I am a passion-driven Tech Entrepreneur' },
+          { property: 'og:description', content: AppConstants.description },
       ]}
       script={[
         {
@@ -52,14 +53,14 @@ const App = ({ children }) => (
           innerHTML: `{
               "@context": "http://schema.org",
               "@type": "WebSite",
-              "url": "http://www.kimwijk.com",
-              "accountablePerson": "Kim Wijk",
-              "image": "http://kimwijk.com/media/profile-picture.jpg",
-              "workExample": "Startups, Apps, Design, Entrepreneurship",
-              "description": "I am a Passion-driven Tech Entrepreneur",
+              "url": "${AppConstants.url}",
+              "accountablePerson": "${AppConstants.name}",
+              "image": "${AppConstants.profilePicture}",
+              "workExample": "${AppConstants.tags}",
+              "description": "${AppConstants.description}",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+46-701622529",
+                "telephone": "${AppConstants.phoneNumber}",
                 "contactType": "customer service"
               }}`,
         },

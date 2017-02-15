@@ -8,6 +8,7 @@ import NotFound from '../../../components/NotFound';
 import { selectCurrentPost } from '../reducer';
 import Card from '../../../components/Card';
 import Loading from '../../../components/Loading';
+import { AppConstants } from '../../../constants';
 
 const redial = {
   fetch: ({ dispatch, params: { slug } }) => dispatch(loadPost(slug)),
@@ -41,7 +42,7 @@ const PostPage = ({ title, subtitle, picture, tags, description, slug, isLoading
               { property: 'og:title', content: title },
               { property: 'og:image', content: picture },
               { property: 'og:site_name', content: title },
-              { property: 'og:url', content: `http://kimwijk.com/post/${slug}` },
+              { property: 'og:url', content: `${AppConstants.url}/post/${slug}` },
               { property: 'og:type', content: 'article' },
               { property: 'og:description', content: description },
           ]}
@@ -51,9 +52,9 @@ const PostPage = ({ title, subtitle, picture, tags, description, slug, isLoading
               innerHTML: `{
                   "@context": "http://schema.org",
                   "@type": "CreativeWork",
-                  "url": "http://www.kimwijk.com",
+                  "url": "${AppConstants.url}",
                   "image": "${picture}",
-                  "producer": "Kim Wijk"
+                  "producer": "${AppConstants.name}"
                 }`,
             },
           ]}
