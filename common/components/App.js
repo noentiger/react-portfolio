@@ -46,20 +46,24 @@ const App = ({ children }) => (
           { property: 'og:type', content: 'article' },
           { property: 'og:description', content: 'I am a passion-driven Tech Entrepreneur' },
       ]}
-      script={[{
-        '@context': 'http://schema.org',
-        '@type': 'WebSite',
-        url: 'http://www.kimwijk.com',
-        accountablePerson: 'Kim Wijk',
-        image: 'http://kimwijk.com/media/profile-picture.jpg',
-        workExample: 'Startups, Apps, Design, Entrepreneurship',
-        description: 'I am a Passion-driven Tech Entrepreneur',
-        contactPoint: [{
-          '@type': 'ContactPoint',
-          telephone: '+46-701622529',
-          contactType: 'customer service',
-        }],
-      }]}
+      script={[
+        {
+          type: 'application/ld+json',
+          innerHTML: `{
+              "@context": "http://schema.org",
+              "@type": "WebSite",
+              "url": "http://www.kimwijk.com",
+              "accountablePerson": "Kim Wijk",
+              "image": "http://kimwijk.com/media/profile-picture.jpg",
+              "workExample": "Startups, Apps, Design, Entrepreneurship",
+              "description": "I am a Passion-driven Tech Entrepreneur",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+46-701622529",
+                "contactType": "customer service"
+              }}`,
+        },
+      ]}
     />
     <Header />
     {children}
