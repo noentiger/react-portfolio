@@ -60,11 +60,11 @@ PostPage.propTypes = {
   tags: PropTypes.arrayOf(React.PropTypes.string),
   content: PropTypes.string.isRequired,
   isLoading: PropTypes.bool.isRequired,
-  error: PropTypes.bool,
+  error: PropTypes.oneOfType([React.PropTypes.oneOf([null]), PropTypes.any]),
 };
 
 PostPage.defaultProps = {
-  error: false,
+  error: null,
   tags: [],
 };
 

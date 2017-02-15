@@ -16,7 +16,7 @@ export const loadPosts = () => (dispatch, getState, { axios }) => {
       .catch((error) => {
         dispatch({
           type: LOAD_POSTS_FAILURE,
-          payload: error,
+          payload: error.response.data,
           error: true,
         });
       });

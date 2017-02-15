@@ -16,7 +16,7 @@ export const loadPost = slug => (dispatch, getState, { axios }) => {
         .catch((error) => {
           dispatch({
             type: LOAD_POST_FAILURE,
-            payload: error,
+            payload: error.response.data,
             error: true,
           });
         });
