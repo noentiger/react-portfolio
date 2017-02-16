@@ -6,5 +6,8 @@ export const modRewrite = (req, res, next) => {
   if (req.headers.host === '95.85.61.66') {
     return res.redirect(301, 'http://kimwijk.com');
   }
+  if (req.headers.host.slice(0, 11) === '95.85.61.66') {
+    return res.redirect(301, `${req.protocol}://kimwijk.com${req.originalUrl}`);
+  }
   return next();
 };
