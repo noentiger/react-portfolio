@@ -23,6 +23,7 @@ import webpackConfig from '../tools/webpack.client.dev';
 import { compileDev, startDev } from '../tools/dx';
 import { configureStore } from '../common/store';
 import createRoutes from '../common/routes/root';
+import { modRewrite } from './utils';
 
 export const createServer = (config) => {
   const __PROD__ = config.nodeEnv === 'production';
@@ -31,6 +32,8 @@ export const createServer = (config) => {
   const app = express();
   let assets = null;
   app.disable('x-powered-by');
+  app.set('trust proxy', true);
+  app.use(modRewrite);
   app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: true }));
 
