@@ -46,6 +46,7 @@ const App = ({ children }) => (
           { property: 'og:url', content: AppConstants.url },
           { property: 'og:type', content: 'article' },
           { property: 'og:description', content: AppConstants.description },
+          { name: 'description', content: AppConstants.description },
       ]}
       script={[
         {
@@ -66,7 +67,7 @@ const App = ({ children }) => (
                   "name": "${AppConstants.name}",
                   "email": "${AppConstants.email}",
                   "telephone": "${AppConstants.phoneNumber}",
-                  "jobTitle": "Tech Entrepreneur",
+                  "jobTitle": "${AppConstants.jobTitle}",
                   "description": "${AppConstants.description}"
                 }
               ]

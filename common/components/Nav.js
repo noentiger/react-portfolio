@@ -6,7 +6,7 @@ const Nav = () => (
   <div>
     {
     AppConstants.links.map(link =>
-      <NavLink link={link.link} title={link.title} />,
+      <NavLink key={link.link} link={link.link} title={link.title} />,
     )}
   </div>
 );

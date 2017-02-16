@@ -1,5 +1,6 @@
 export const AppConstants = {
   name: 'Kim Wijk',
+  jobTitle: 'Tech Entrepreneur',
   phoneNumber: '+46-701622529',
   email: 'kim.wijk@gmail.com',
   url: 'http://kimwijk.com',

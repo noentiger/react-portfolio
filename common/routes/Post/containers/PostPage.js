@@ -45,6 +45,7 @@ const PostPage = ({ title, subtitle, picture, tags, description, slug, isLoading
               { property: 'og:url', content: `${AppConstants.url}/post/${slug}` },
               { property: 'og:type', content: 'article' },
               { property: 'og:description', content: description },
+              { name: 'description', content: AppConstants.description },
           ]}
           script={[
             {
