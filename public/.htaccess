@@ -1,0 +1,8 @@
+RewriteCond %{HTTP_HOST} ^95\.85\.61\.66
+RewriteRule (.*) http://kimwijk.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.kimwijk\.com$
+RewriteRule ^/?$ "http\:\/\/kimwijk\.com\/" [R=301,L]
+
+RewriteCond %{HTTP_USER_AGENT} libwww-perl.*
+RewriteRule .* ? [F,L]
