@@ -52,17 +52,25 @@ const App = ({ children }) => (
           type: 'application/ld+json',
           innerHTML: `{
               "@context": "http://schema.org",
-              "@type": "WebSite",
+              "@type": "Organization",
               "url": "${AppConstants.url}",
-              "accountablePerson": "${AppConstants.name}",
               "image": "${AppConstants.profilePicture}",
-              "workExample": "${AppConstants.tags}",
               "description": "${AppConstants.description}",
-              "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "${AppConstants.phoneNumber}",
-                "contactType": "customer service"
-              }}`,
+              "email": "${AppConstants.email}",
+              "mainEntityOfPage": {
+                "@type": "CreativeWork"
+              },
+              "alumni": [
+                {
+                  "@type": "Person",
+                  "name": "${AppConstants.name}",
+                  "email": "${AppConstants.email}",
+                  "telephone": "${AppConstants.phoneNumber}",
+                  "jobTitle": "Tech Entrepreneur",
+                  "description": "${AppConstants.description}"
+                }
+              ]
+          }`,
         },
       ]}
     />
