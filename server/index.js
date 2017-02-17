@@ -210,7 +210,7 @@ export const createServer = (config) => {
                 ${head.script.toString()}
                 <script>window.renderedClassNames = ${JSON.stringify(data.css.renderedClassNames)};</script>
                 <script>window.INITIAL_STATE = ${JSON.stringify(initialState)};</script>
-                <script async src="${__PROD__ ? assets.vendor.js : '/vendor.js'}"></script>
+                <script src="${__PROD__ ? assets.vendor.js : '/vendor.js'}"></script>
                 <script async src="${__PROD__ ? assets.main.js : '/main.js'}" ></script>
               </body>
             </html>
