@@ -122,8 +122,10 @@ export const createServer = (config) => {
                 <link rel="shortcut icon" href="/favicon.ico">
                 <link rel="stylesheet" href="/app.css" />
                 ${head.link.toString()}
-                ${head.script.toString()}
                 <style data-aphrodite>${data.css.content}</style>
+              </head>
+              <body>
+                <div id="root">${data.html}</div>
                 <script>
                   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -134,9 +136,7 @@ export const createServer = (config) => {
                   ga('send', 'pageview');
 
                 </script>
-              </head>
-              <body>
-                <div id="root">${data.html}</div>
+                ${head.script.toString()}
                 <script>window.renderedClassNames = ${JSON.stringify(data.css.renderedClassNames)};</script>
                 <script>window.INITIAL_STATE = ${JSON.stringify(initialState)};</script>
                 <script src="${__PROD__ ? assets.vendor.js : '/vendor.js'}"></script>
