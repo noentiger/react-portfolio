@@ -120,8 +120,84 @@ export const createServer = (config) => {
                 ${head.meta.toString()}
                 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
                 <link rel="shortcut icon" href="/favicon.ico">
-                <link rel="stylesheet" href="/app.css" />
                 ${head.link.toString()}
+                <style type="text/css">
+                    @font-face {
+                        font-family: 'Circular';
+                        src: url('/fonts/circular-light.woff2') format('woff2'), /* Super Modern Browsers */
+                             url('/fonts/circular-light.woff') format('woff'); /* Pretty Modern Browsers */
+                        font-weight: 300;
+                        font-style: normal;
+                    }
+
+                    @font-face {
+                        font-family: 'Circular';
+                        src: url('/fonts/circular-book.woff2') format('woff2'), /* Super Modern Browsers */
+                             url('/fonts/circular-book.woff') format('woff'); /* Pretty Modern Browsers */
+                        font-weight: 400;
+                        font-style: normal;
+                    }
+
+                    @font-face {
+                        font-family: 'Circular';
+                        src: url('/fonts/circular-medium.woff2') format('woff2'), /* Super Modern Browsers */
+                             url('/fonts/circular-medium.woff') format('woff'); /* Pretty Modern Browsers */
+                        font-weight: 500;
+                        font-style: normal;
+                    }
+
+                    @font-face {
+                        font-family: 'Circular';
+                        src: url('/fonts/circular-bold.woff2') format('woff2'), /* Super Modern Browsers */
+                             url('/fonts/circular-bold.woff') format('woff'); /* Pretty Modern Browsers */
+                        font-weight: 700;
+                        font-style: normal;
+                    }
+
+                    @font-face {
+                        font-family: 'Circular';
+                        src: url('/fonts/circular-black.woff2') format('woff2'), /* Super Modern Browsers */
+                             url('/fonts/circular-black.woff') format('woff'); /* Pretty Modern Browsers */
+                        font-weight: 900;
+                        font-style: normal;
+                    }
+
+                    html {
+                      box-sizing: border-box
+                    }
+
+                    *,
+                    *::before,
+                    *::after {
+                      box-sizing: border-box
+                    }
+
+                    html {
+                      font-size: 100%;
+                      -ms-overflow-style: scrollbar;
+                      -webkit-tap-highlight-color: rgba(0,0,0,0);
+                      height: 100%;
+                    }
+
+                    body {
+                      font-size: 1rem;
+                      background-color: #fff;
+                      color: #555;
+                      -webkit-font-smoothing: antialiased;
+                      -moz-osx-font-smoothing: grayscale;
+                      font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+                    }
+
+                    h1,h2,h3,h4,h5,h6 {
+                      margin: 0;
+                      padding: 0;
+                    }
+
+                    a[class^="cardContainer_"]:hover img {
+                      transform: scale(1.1);
+                      opacity: 0.6;
+                    }
+                </style>
                 <style data-aphrodite>${data.css.content}</style>
               </head>
               <body>
